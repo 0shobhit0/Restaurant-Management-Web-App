@@ -26,13 +26,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 const drawerWidth = 240;
 const drawerBackgroundColor = "rgba(0, 0, 0, 0)";
 
-// if(role === "superdsfdsf"){
-//   menuList.push(  {
-//     text: "Admin Management",
-//     icon: <ManageAccountsIcon sx={{ color: "#fff" }} />,
-//     page: "/admindatapage",
-//   },)
-// }
+
 
 const openedMixin = (theme) => ({
   width: drawerWidth,
@@ -64,8 +58,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "flex-end",
   backdropFilter: "blur(8px)",
-  // backgroundColor: "rgba(255, 255, 255, 0.1)",
-  // border: "2px solid #E5E7EB",
+
   padding: theme.spacing(0, 1),
 
   ...theme.mixins.toolbar,
@@ -77,8 +70,7 @@ const Drawer = styled(MuiDrawer, {
 })(({ theme, open }) => ({
   width: drawerWidth,
   backdropFilter: "blur(4px)",
-  // backgroundColor: "rgba(255, 255, 255, 0.1)",
-  //border: "2px solid #E5E7EB",
+
   flexShrink: 0,
   whiteSpace: "nowrap",
 
@@ -134,6 +126,11 @@ const MainLayout = ({ children }) => {
       text: "Item Overview",
       icon: <ListAlt sx={{ color: "#fff" }} />,
       page: "/itemoverview",
+    },
+    {
+      text: "Customer Data",
+      icon: <ListAlt sx={{ color: "#fff" }} />,
+      page: "/datapage",
     },
   ];
 
